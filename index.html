@@ -1,0 +1,1000 @@
+WEBSILL Solutions - Loja Virtual
+
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WEBSILL Solutions by SAIZY - Serviços Informáticos</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-color: #2c3e50;
+            --secondary-color: #3498db;
+            --accent-color: #e74c3c;
+            --light-color: #ecf0f1;
+            --dark-color: #2c3e50;
+            --success-color: #2ecc71;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            color: var(--dark-color);
+            line-height: 1.6;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        header {
+            background: var(--primary-color);
+            color: white;
+            padding: 20px 0;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 28px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+        }
+        
+        .logo i {
+            color: var(--secondary-color);
+            margin-right: 10px;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 16px;
+        }
+        
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+        
+   .hero {
+    background: url('saize.jpg') no-repeat center center fixed;
+    background-size: cover;
+    height: 500px;
+    width: 80%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    border-radius: 20px; /* só pra dar um estilo */
+    overflow: hidden;
+}
+
+}
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6);
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+            color: white;
+            max-width: 600px;
+        }
+        
+        .hero h1 {
+            font-size: 48px;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+        
+        .hero p {
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            display: inline-block;
+            background: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 600;
+            transition: all 0.3s;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        
+        .btn:hover {
+            background: #2980b9;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-accent {
+            background: var(--accent-color);
+        }
+        
+        .btn-accent:hover {
+            background: #c0392b;
+        }
+        
+        .btn-whatsapp {
+            background: #25D366;
+        }
+        
+        .btn-whatsapp:hover {
+            background: #128C7E;
+        }
+        
+        .section {
+            padding: 80px 0;
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+        
+        .section-title h2 {
+            font-size: 36px;
+            color: var(--primary-color);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+        
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            width: 70px;
+            height: 3px;
+            background: var(--secondary-color);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        .section-title p {
+            color: #7f8c8d;
+            max-width: 700px;
+            margin: 0 auto;
+        }
+        
+        .services {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .service-img {
+            height: 200px;
+            overflow: hidden;
+        }
+        
+        .service-img img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.5s;
+        }
+        
+        .service-card:hover .service-img img {
+            transform: scale(1.1);
+        }
+        
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            font-size: 22px;
+            margin-bottom: 15px;
+            color: var(--primary-color);
+        }
+        
+        .service-content p {
+            color: #7f8c8d;
+            margin-bottom: 20px;
+        }
+        
+        .price {
+            font-size: 24px;
+            font-weight: 700;
+            color: var(--accent-color);
+            margin-bottom: 20px;
+        }
+        
+        .payment-methods {
+            margin-top: 20px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+        }
+        
+        .payment-methods p {
+            font-size: 14px;
+            color: #7f8c8d;
+            margin-bottom: 10px;
+        }
+        
+        .payment-icons {
+            display: flex;
+            gap: 10px;
+        }
+        
+        .payment-icons i {
+            font-size: 24px;
+            color: #7f8c8d;
+        }
+        
+        .emola-link {
+            display: inline-block;
+            background: #f1f1f1;
+            padding: 8px 15px;
+            border-radius: 5px;
+            color: var(--primary-color);
+            text-decoration: none;
+            font-size: 14px;
+            margin-top: 10px;
+            word-break: break-all;
+        }
+        
+        .contact-info {
+            background: var(--primary-color);
+            color: white;
+            padding: 40px 0;
+            text-align: center;
+        }
+        
+        .contact-info h3 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+        
+        .contact-methods {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            flex-wrap: wrap;
+            margin-top: 30px;
+        }
+        
+        .contact-method {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 20px;
+            border-radius: 10px;
+            width: 250px;
+            transition: transform 0.3s;
+        }
+        
+        .contact-method:hover {
+            transform: translateY(-5px);
+        }
+        
+        .contact-method i {
+            font-size: 30px;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+        
+        .contact-method h4 {
+            margin-bottom: 10px;
+            font-size: 18px;
+        }
+        
+        .contact-method p, .contact-method a {
+            color: #bdc3c7;
+            text-decoration: none;
+        }
+        
+        .contact-method a:hover {
+            color: var(--secondary-color);
+        }
+        
+        footer {
+            background: var(--dark-color);
+            color: white;
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+        }
+        
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+        
+        .social-links a {
+            color: white;
+            font-size: 20px;
+            transition: color 0.3s;
+        }
+        
+        .social-links a:hover {
+            color: var(--secondary-color);
+        }
+        
+        .copyright {
+            margin-top: 20px;
+            width: 100%;
+            font-size: 14px;
+            color: #bdc3c7;
+        }
+        
+        /* Modal */
+        .modal {
+            display: none;
+            position: fixed;
+            z-index: 1000;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.8);
+        }
+        
+        .modal-content {
+            background-color: #fefefe;
+            margin: 5% auto;
+            padding: 30px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 700px;
+            position: relative;
+            animation: modalopen 0.5s;
+        }
+        
+        @keyframes modalopen {
+            from {opacity: 0; transform: translateY(-50px);}
+            to {opacity: 1; transform: translateY(0);}
+        }
+        
+        .close {
+            position: absolute;
+            top: 15px;
+            right: 25px;
+            font-size: 28px;
+            font-weight: bold;
+            color: #aaa;
+            cursor: pointer;
+        }
+        
+        .close:hover {
+            color: var(--accent-color);
+        }
+        
+        .modal-body {
+            margin-top: 20px;
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 8px;
+            font-weight: 500;
+        }
+        
+        .form-control {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+        
+        textarea.form-control {
+            min-height: 120px;
+            resize: vertical;
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+                text-align: center;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            nav ul li {
+                margin: 10px 0;
+            }
+            
+            .hero {
+                height: 400px;
+                text-align: center;
+            }
+            
+            .hero h1 {
+                font-size: 36px;
+            }
+            
+            .section {
+                padding: 60px 0;
+            }
+            
+            .section-title h2 {
+                font-size: 30px;
+            }
+            
+            .contact-methods {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .footer-content {
+                flex-direction: column;
+                gap: 20px;
+            }
+        }
+        
+        /* Upload de fotos */
+        .upload-area {
+            border: 2px dashed #ccc;
+            border-radius: 10px;
+            padding: 30px;
+            text-align: center;
+            margin-bottom: 20px;
+            cursor: pointer;
+            transition: all 0.3s;
+        }
+        
+        .upload-area:hover {
+            border-color: var(--secondary-color);
+            background: rgba(52, 152, 219, 0.05);
+        }
+        
+        .upload-area i {
+            font-size: 48px;
+            color: var(--secondary-color);
+            margin-bottom: 15px;
+        }
+        
+        .upload-area p {
+            color: #7f8c8d;
+        }
+        
+        #file-input {
+            display: none;
+        }
+        
+        .preview-images {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .preview-image {
+            width: 100px;
+            height: 100px;
+            border-radius: 5px;
+            overflow: hidden;
+            position: relative;
+        }
+        
+        .preview-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+        
+        .remove-image {
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            background: var(--accent-color);
+            color: white;
+            width: 20px;
+            height: 20px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container header-content">
+            <div class="logo">
+                <i class="fas fa-laptop-code"></i>
+                <span>WEBSILL Solutions</span>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="#services">Serviços</a></li>
+                    <li><a href="#about">Sobre</a></li>
+                    <li><a href="#contact">Contactos</a></li>
+                    <li><a href="#" id="order-btn">Encomendar</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>Soluções Informáticas Profissionais</h1>
+            <p>Oferecemos serviços de TI de alta qualidade para impulsionar o seu negócio. Desde desenvolvimento web até suporte técnico especializado.</p>
+            <a href="#services" class="btn">Nossos Serviços</a>
+            <a href="https://wa.me/258845189963" class="btn btn-whatsapp" target="_blank">
+                <i class="fab fa-whatsapp"></i> WhatsApp
+            </a>
+        </div>
+    </section>
+    
+    <section id="services" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Nossos Serviços</h2>
+                <p>Descubra nossa gama de serviços informáticos profissionais para atender todas as suas necessidades tecnológicas.</p>
+            </div>
+            
+            <div class="services">
+                <!-- Serviço 1 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1547658719-da2b51169166?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1528&q=80" alt="Desenvolvimento Web">
+                    </div>
+                    <div class="service-content">
+                        <h3>Desenvolvimento Web</h3>
+                        <p>Criação de websites profissionais, responsivos e otimizados para motores de busca que impulsionam sua presença online.</p>
+                        <div class="price">2.000 MT - 5.000 MT</div>
+                        <a href="https://wa.me/258845189963?text=Estou%20interessado%20no%20serviço%20de%20Desenvolvimento%20Web" class="btn btn-accent">Encomendar</a>
+                        
+                        <div class="payment-methods">
+                            <p>Métodos de pagamento:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                                <i class="fas fa-mobile-alt" title="e-Mola"></i>
+                                <i class="fas fa-university" title="Transferência Bancária"></i>
+                            </div>
+                            <a href="https://emola.gov.mz" class="emola-link" target="_blank">e-Mola: 861492524</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 2 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1555774698-0b77e0d5fac6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Aplicativos Móveis">
+                    </div>
+                    <div class="service-content">
+                        <h3>Aplicativos Móveis</h3>
+                        <p>Desenvolvimento de aplicativos iOS e Android personalizados para expandir seu negócio para o mundo móvel.</p>
+                        <div class="price">10.000 MT - 80.000 MT</div>
+                        <a href="https://wa.me/258845189963?text=Estou%20interessado%20no%20serviço%20de%20Aplicativos%20Móveis" class="btn btn-accent">Encomendar</a>
+                        
+                        <div class="payment-methods">
+                            <p>Métodos de pagamento:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                                <i class="fas fa-mobile-alt" title="e-Mola"></i>
+                                <i class="fas fa-university" title="Transferência Bancária"></i>
+                            </div>
+                            <a href="https://emola.gov.mz" class="emola-link" target="_blank">e-Mola: 861492524</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 3 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1581094794329-c8112a89af12?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Manutenção de Computadores">
+                    </div>
+                    <div class="service-content">
+                        <h3>Manutenção de Computadores</h3>
+                        <p>Reparação e manutenção de hardware e software para manter seus dispositivos funcionando perfeitamente.</p>
+                        <div class="price">500 MT - 5.000 MT</div>
+                        <a href="https://wa.me/258845189963?text=Estou%20interessado%20no%20serviço%20de%20Manutenção%20de%20Computadores" class="btn btn-accent">Encomendar</a>
+                        
+                        <div class="payment-methods">
+                            <p>Métodos de pagamento:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                                <i class="fas fa-mobile-alt" title="e-Mola"></i>
+                                <i class="fas fa-university" title="Transferência Bancária"></i>
+                            </div>
+                            <a href="https://emola.gov.mz" class="emola-link" target="_blank">e-Mola: 861492524</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 4 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Design Gráfico">
+                    </div>
+                    <div class="service-content">
+                        <h3>Design Gráfico</h3>
+                        <p>Criação de identidades visuais, logos, banners e materiais de marketing profissional para sua marca.</p>
+                        <div class="price">1.000 MT - 15.000 MT</div>
+                        <a href="https://wa.me/258845189963?text=Estou%20interessado%20no%20serviço%20de%20Design%20Gráfico" class="btn btn-accent">Encomendar</a>
+                        
+                        <div class="payment-methods">
+                            <p>Métodos de pagamento:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                                <i class="fas fa-mobile-alt" title="e-Mola"></i>
+                                <i class="fas fa-university" title="Transferência Bancária"></i>
+                            </div>
+                            <a href="https://emola.gov.mz" class="emola-link" target="_blank">e-Mola: 861492524</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 5 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1573164713988-8665fc963095?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1469&q=80" alt="Redes e Segurança">
+                    </div>
+                    <div class="service-content">
+                        <h3>Redes e Segurança</h3>
+                        <p>Configuração de redes locais e implementação de soluções de segurança para proteger seus dados.</p>
+                        <div class="price">3.000 MT - 30.000 MT</div>
+                        <a href="https://wa.me/258845189963?text=Estou%20interessado%20no%20serviço%20de%20Redes%20e%20Segurança" class="btn btn-accent">Encomendar</a>
+                        
+                        <div class="payment-methods">
+                            <p>Métodos de pagamento:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                                <i class="fas fa-mobile-alt" title="e-Mola"></i>
+                                <i class="fas fa-university" title="Transferência Bancária"></i>
+                            </div>
+                            <a href="https://emola.gov.mz" class="emola-link" target="_blank">e-Mola: 861492524</a>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Serviço 6 -->
+                <div class="service-card">
+                    <div class="service-img">
+                        <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1470&q=80" alt="Consultoria em TI">
+                    </div>
+                    <div class="service-content">
+                        <h3>Consultoria em TI</h3>
+                        <p>Orientação especializada para ajudar sua empresa a tomar as melhores decisões tecnológicas.</p>
+                        <div class="price">2.000 MT/hora</div>
+                        <a href="https://wa.me/258845189963?text=Estou%20interessado%20no%20serviço%20de%20Consultoria%20em%20TI" class="btn btn-accent">Encomendar</a>
+                        
+                        <div class="payment-methods">
+                            <p>Métodos de pagamento:</p>
+                            <div class="payment-icons">
+                                <i class="fas fa-money-bill-wave" title="Dinheiro"></i>
+                                <i class="fas fa-mobile-alt" title="e-Mola"></i>
+                                <i class="fas fa-university" title="Transferência Bancária"></i>
+                            </div>
+                            <a href="https://emola.gov.mz" class="emola-link" target="_blank">e-Mola: 861492524</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="about" class="section" style="background: #f8f9fa;">
+        <div class="container">
+            <div class="section-title">
+                <h2>Sobre Nós</h2>
+                <p>Conheça a WEBSILL Solutions e nossa missão de fornecer serviços informáticos de excelência.</p>
+            </div>
+            
+            <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                <p style="margin-bottom: 20px; font-size: 18px;">
+                    A WEBSILL Solutions é uma empresa especializada em serviços informáticos, localizada  em nampula, comprometida em oferecer soluções tecnológicas inovadoras e personalizadas para empresas e indivíduos.
+                </p>
+                <p style="margin-bottom: 20px; font-size: 18px;">
+                    Nossa equipe de profissionais qualificados possui vasta experiência em diversas áreas da tecnologia da informação, garantindo que cada projeto seja executado com excelência e dentro dos prazos estabelecidos.
+                </p>
+                <p style="font-size: 18px;">
+                    Acreditamos que a tecnologia deve ser acessível e fácil de usar, e é por isso que nos esforçamos para criar soluções que realmente atendam às necessidades dos nossos clientes, com suporte contínuo e atendimento personalizado.
+                </p>
+				<P>SAIZY FRANCISCO</P>
+            </div>
+        </div>
+    </section>
+    
+    <section id="contact" class="contact-info">
+        <div class="container">
+            <h3>Entre em Contato</h3>
+            <p>Estamos prontos para ajudar com suas necessidades de TI. Entre em contato conosco através dos seguintes meios:</p>
+            
+            <div class="contact-methods">
+                <div class="contact-method">
+                    <i class="fab fa-whatsapp"></i>
+                    <h4>WhatsApp</h4>
+                    <a href="https://wa.me/258845189963" target="_blank">+258 84 518 9963</a>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fas fa-mobile-alt"></i>
+                    <h4>e-Mola</h4>
+                    <p>861492524</p>
+                    <a href="https://emola.gov.mz" target="_blank">emola.gov.mz</a>
+                </div>
+                
+                <div class="contact-method">
+                    <i class="fas fa-envelope"></i>
+                    <h4>Email</h4>
+                    <a href="mailto:Saizefrancisco10.@gmal.com">Saizefrancisco01@gmail.com</a>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Modal de Encomenda -->
+    <div id="order-modal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <h2 style="color: var(--primary-color);">Fazer Encomenda</h2>
+            <div class="modal-body">
+                <form id="order-form">
+                    <div class="form-group">
+                        <label for="name">SAIZY FRANCISCO</label>
+                        <input type="text" id="name" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="email" id="email" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="phone">845189963</label>
+                        <input type="tel" id="phone" class="form-control" required>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="service">Serviço Desejado</label>
+                        <select id="service" class="form-control" required>
+                            <option value="">Selecione um serviço...</option>
+                            <option value="Desenvolvimento Web">Desenvolvimento Web</option>
+                            <option value="Aplicativos Móveis">Aplicativos Móveis</option>
+                            <option value="Manutenção de Computadores">Manutenção de Computadores</option>
+                            <option value="Design Gráfico">Design Gráfico</option>
+                            <option value="Redes e Segurança">Redes e Segurança</option>
+                            <option value="Consultoria em TI">Consultoria em TI</option>
+                            <option value="Outro">Outro</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="details">Detalhes do Serviço</label>
+                        <textarea id="details" class="form-control" required></textarea>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label>Anexar Fotos (Opcional)</label>
+                        <div class="upload-area" id="upload-area">
+                            <i class="fas fa-cloud-upload-alt"></i>
+                            <p>Arraste e solte arquivos aqui ou clique para selecionar</p>
+                            <input type="file" id="file-input" multiple accept="image/*">
+                        </div>
+                        <div class="preview-images" id="preview-images"></div>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="payment">Método de Pagamento Preferido</label>
+                        <select id="payment" class="form-control" required>
+                            <option value="">Selecione...</option>
+                            <option value="e-Mola">e-Mola (861492524)</option>
+                            <option value="Transferência Bancária">Transferência Bancária</option>
+                            <option value="Dinheiro">Dinheiro</option>
+                        </select>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-accent" style="width: 100%;">Enviar Encomenda</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer>
+        <div class="container footer-content">
+            <div class="logo" style="color: white; margin-bottom: 20px;">
+                <i class="fas fa-laptop-code"></i>
+                <span>WEBSILL Solutions</span>
+            </div>
+            
+            <div class="social-links">
+                <a href="https://facebook.com" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fab fa-instagram"></i></a>
+                <a href="https://linkedin.com" target="_blank"><i class="fab fa-linkedin-in"></i></a>
+                <a href="https://wa.me/258845189963" target="_blank"><i class="fab fa-whatsapp"></i></a>
+            </div>
+            
+            <div class="copyright">
+                &copy; 2023 WEBSILL Solutions. Todos os direitos reservados. NAMAPULA BY SAIZY
+            </div>
+        </div>
+    </footer>
+    
+    <script>
+        // Modal
+        const modal = document.getElementById("order-modal");
+        const btn = document.getElementById("order-btn");
+        const span = document.getElementsByClassName("close")[0];
+        
+        btn.onclick = function() {
+            modal.style.display = "block";
+        }
+        
+        span.onclick = function() {
+            modal.style.display = "none";
+        }
+        
+        window.onclick = function(event) {
+            if (event.target == modal) {
+                modal.style.display = "none";
+            }
+        }
+        
+        // Upload de imagens
+        const uploadArea = document.getElementById("upload-area");
+        const fileInput = document.getElementById("file-input");
+        const previewImages = document.getElementById("preview-images");
+        
+        uploadArea.addEventListener("click", () => {
+            fileInput.click();
+        });
+        
+        uploadArea.addEventListener("dragover", (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = var("--secondary-color");
+            uploadArea.style.backgroundColor = "rgba(52, 152, 219, 0.1)";
+        });
+        
+        uploadArea.addEventListener("dragleave", () => {
+            uploadArea.style.borderColor = "#ccc";
+            uploadArea.style.backgroundColor = "transparent";
+        });
+        
+        uploadArea.addEventListener("drop", (e) => {
+            e.preventDefault();
+            uploadArea.style.borderColor = "#ccc";
+            uploadArea.style.backgroundColor = "transparent";
+            
+            const files = e.dataTransfer.files;
+            handleFiles(files);
+        });
+        
+        fileInput.addEventListener("change", () => {
+            const files = fileInput.files;
+            handleFiles(files);
+        });
+        
+        function handleFiles(files) {
+            for (let i = 0; i < files.length; i++) {
+                const file = files[i];
+                if (!file.type.match("image.*")) continue;
+                
+                const reader = new FileReader();
+                
+                reader.onload = function(e) {
+                    const previewImage = document.createElement("div");
+                    previewImage.className = "preview-image";
+                    
+                    const img = document.createElement("img");
+                    img.src = e.target.result;
+                    
+                    const removeBtn = document.createElement("div");
+                    removeBtn.className = "remove-image";
+                    removeBtn.innerHTML = "&times;";
+                    removeBtn.addEventListener("click", () => {
+                        previewImage.remove();
+                    });
+                    
+                    previewImage.appendChild(img);
+                    previewImage.appendChild(removeBtn);
+                    previewImages.appendChild(previewImage);
+                }
+                
+                reader.readAsDataURL(file);
+            }
+        }
+        
+        // Formulário
+        const orderForm = document.getElementById("order-form");
+        
+        orderForm.addEventListener("submit", function(e) {
+            e.preventDefault();
+            
+            // Aqui você pode adicionar código para enviar o formulário
+			// Formulário
+const orderForm = document.getElementById("order-form");
+
+orderForm.addEventListener("submit", function(e) {
+    e.preventDefault();
+
+    // Coleta dos dados
+    const data = {
+        nome: document.getElementById("name").value,
+        email: document.getElementById("email").value,
+        telefone: document.getElementById("phone").value,
+        servico: document.getElementById("service").value,
+        detalhes: document.getElementById("details").value,
+        pagamento: document.getElementById("payment").value
+    };
+
+    // Simula envio e mostra feedback
+    console.log("Dados do pedido:", data);
+
+    alert("Encomenda enviada com sucesso! Entraremos em contacto em breve.");
+
+    // Fecha o modal
+    const modal = document.getElementById("order-modal");
+    modal.style.display = "none";
+
+    // Reseta o formulário
+    orderForm.reset();
+    document.getElementById("preview-images").innerHTML = "";
+});
+</script>
+</body>
+</html>
